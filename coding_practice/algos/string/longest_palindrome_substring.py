@@ -5,7 +5,8 @@ def is_palindrome(s):
 def longest_palindrome(s):
     longest_palindrome = ""
     for i in range(len(s)):
-        l=0
+        print i
+        l=len(longest_palindrome)/2
         # odd length palindromes
         while i-l>=0 and i+l<len(s):
             substr = s[i-l:i+1+l]
@@ -15,7 +16,7 @@ def longest_palindrome(s):
                 l=l+1
             else:
                 break
-        l=0
+        l=len(longest_palindrome)/2
         # even length palindromes
         while i-l>=0 and i+1+l<len(s):
             substring = s[i-l:i+2+l]
@@ -34,3 +35,4 @@ if __name__ == '__main__':
     print longest_palindrome('ababa')
     print longest_palindrome('')
     print longest_palindrome('dasat')
+    print longest_palindrome('ab'*1000)

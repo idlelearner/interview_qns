@@ -16,6 +16,8 @@ def QuestionsMarks(str):
             if v[i]=="?":
                 break
             i+=1
+        if 
+        s_pos, s_no = i, int(v[i])
 
 
 

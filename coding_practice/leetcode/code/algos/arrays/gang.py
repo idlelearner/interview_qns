@@ -28,7 +28,7 @@ def isOneGang(criminalsAndCrimes):
     crime_dict = dict()
     for i in xrange(0, no_of_criminals, 1):
         for j in xrange(0, len(criminalsAndCrimes[i]), 1):
-            # if i or j criminal is not processed
+                # check if the crime is done by someone else
                 if crime_dict.get(criminalsAndCrimes[i][j]):
                     gang.add(i)
                     gang.add(j)
